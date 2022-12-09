@@ -35,3 +35,22 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const ADD_TRANSACTION = gql`
+  mutation addTransaction(
+    $recipient: String!
+    $amount: Int!
+    $message: String
+  ) {
+    addTransaction(recipient: $recipient, amount: $amount, message: $message) {
+      _id
+      transaction_date
+      recipient
+      senderEndingBalance
+      recipientEndingBalance
+      sender
+      amount
+      message
+    }
+  }
+`;
