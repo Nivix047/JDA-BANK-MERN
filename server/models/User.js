@@ -30,10 +30,12 @@ const userSchema = new Schema(
       type: Number,
       default: 100,
     },
-    transactions: {
-      type: Schema.Types.ObjectId,
-      ref: "Transaction",
-    },
+    transactions: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Transaction",
+      },
+    ],
   },
   // set this to use virtual below
   {

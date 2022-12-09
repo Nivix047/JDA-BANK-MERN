@@ -12,10 +12,10 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select(
-          "-__v -password"
+        const userData = await User.findOne({ _id: context.user._id }).populate(
+          "transactions"
         );
-
+        console.log("userData", userData);
         return userData;
       }
 
@@ -63,20 +63,7 @@ const resolvers = {
         const userBalance = user.balance;
         const recEndBal = recipientBalance + amount;
         const userEndbal = userBalance - amount;
-        await User.findOneAndUpdate(
-          {
-            username: userRecipient.username,
-          },
-          { $set: { balance: recEndBal } }
-        );
-        await User.findOneAndUpdate(
-          {
-            username: user.username,
-          },
-          {
-            $set: { balance: userEndbal },
-          }
-        );
+
         const newTransaction = await Transaction.create({
           recipient: recipient,
           sender: context.user.username,
@@ -85,6 +72,28 @@ const resolvers = {
           senderEndingBalance: userEndbal,
           recipientEndingBalance: recEndBal,
         });
+        console.log("newTransaction", newTransaction._id);
+        const x = await User.findOneAndUpdate(
+          {
+            username: userRecipient.username,
+          },
+          {
+            $set: { balance: recEndBal },
+            $addToSet: { transactions: { _id: newTransaction._id } },
+          },
+          { new: true }
+        );
+        const y = await User.findOneAndUpdate(
+          {
+            username: user.username,
+          },
+          {
+            $set: { balance: userEndbal },
+            $addToSet: { transactions: { _id: newTransaction._id } },
+          },
+          { new: true }
+        );
+        console.log(x, y);
         console.log(newTransaction);
         return newTransaction;
       }
