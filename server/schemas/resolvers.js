@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Transaction } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -54,6 +54,41 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addTransaction: async (parent, { recipient, amount, message }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id);
+        const userRecipient = await User.findOne({ username: recipient });
+        const recipientBalance = userRecipient.balance;
+        const userBalance = user.balance;
+        const recEndBal = recipientBalance + amount;
+        const userEndbal = userBalance - amount;
+        await User.findOneAndUpdate(
+          {
+            username: userRecipient.username,
+          },
+          { $set: { balance: recEndBal } }
+        );
+        await User.findOneAndUpdate(
+          {
+            username: user.username,
+          },
+          {
+            $set: { balance: userEndbal },
+          }
+        );
+        const newTransaction = await Transaction.create({
+          recipient: recipient,
+          sender: context.user.username,
+          amount: amount,
+          message: message,
+          senderEndingBalance: userEndbal,
+          recipientEndingBalance: recEndBal,
+        });
+        console.log(newTransaction);
+        return newTransaction;
+      }
+      throw new AuthenticationError("Not logged in");
     },
   },
 };
