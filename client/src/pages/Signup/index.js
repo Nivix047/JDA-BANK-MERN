@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
-function Login() {
+function Signup() {
   return (
-    <div className="container login-form">
+    <div className="container signup-form">
       <div className="row">
         <div className="col-7">
           <h1 className="display-3">
@@ -16,45 +14,45 @@ function Login() {
         </div>
         <div className="col">
           <div className="col d-flex justify-content-center login-signup-form p-4">
-            <form className="login-form login-signup-form">
+            <form className="signup-form login-signup-form">
               <div className="row">
                 <div className="col display-6">Welcome!</div>
                 <div className="mb-3">
                   <label
-                    htmlFor="username-login"
+                    htmlFor="username-signup"
                     className="form-label"
                   ></label>
                   <input
                     type="text"
                     className="form-control"
                     placeholder="Username"
-                    id="username-login"
+                    id="username-signup"
                   />
                 </div>
                 <div className="mb-3">
                   <label
-                    htmlFor="password-login"
+                    htmlFor="password-signup"
                     className="form-label"
                   ></label>
                   <input
                     type="password"
                     className="form-control"
                     placeholder="Password"
-                    id="password-login"
+                    id="password-signup"
                   />
                 </div>
                 <div className="form-group mb-3">
                   <button type="submit" className="btn btn-success w-100">
-                    Sign in
+                    Sign up
                   </button>
                 </div>
                 <div className="form-group">
-                  <Link
-                    to="/signup"
+                  <a
+                    href="/login"
                     className="text-decoration-none signup-login-href text-success"
                   >
-                    Sign up instead
-                  </Link>
+                    Login instead
+                  </a>
                 </div>
               </div>
             </form>
@@ -65,4 +63,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
