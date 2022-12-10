@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Signup() {
   return (
     <div className="container signup-form">
@@ -47,12 +49,12 @@ function Signup() {
                   </button>
                 </div>
                 <div className="form-group">
-                  <a
-                    href="/login"
+                  <Link
+                    to="/login"
                     className="text-decoration-none signup-login-href text-success"
                   >
                     Login instead
-                  </a>
+                  </Link>
                 </div>
               </div>
             </form>
