@@ -20,15 +20,12 @@ function Login() {
               <div className="row">
                 <div className="col display-6">Welcome!</div>
                 <div className="mb-3">
-                  <label
-                    htmlFor="username-login"
-                    className="form-label"
-                  ></label>
+                  <label htmlFor="email-login" className="form-label"></label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control"
-                    placeholder="Username"
-                    id="username-login"
+                    placeholder="Email"
+                    id="email-login"
                   />
                 </div>
                 <div className="mb-3">
