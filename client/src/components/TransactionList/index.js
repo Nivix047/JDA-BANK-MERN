@@ -7,12 +7,12 @@ const TransactionList = () => {
         <div className="m-4">
           <div id="debit-transaction">
             You paid
-            <span className="cap">recipient</span>
+            <span className="cap"> recipient</span>
             on date
           </div>
           <div id="credit-transaction">
-            <span class="cap">recipient</span>
-            paid you $ credit on
+            <span className="cap">recipient</span>
+            paid you $ credit on date
           </div>
         </div>
       </div>

@@ -56,7 +56,7 @@ const TransactionForm = () => {
         <input type="hidden" name="current-balance" value="" />
         <div className="row">
           <div className="mb-3">
-            <label for="recipient" className="form-label"></label>
+            <label htmlFor="recipient" className="form-label"></label>
             <input
               type="text"
               className="form-control"
@@ -65,7 +65,7 @@ const TransactionForm = () => {
             />
           </div>
           <div className="mb-3">
-            <label for="transfer-amount" className="form-label"></label>
+            <label htmlFor="transfer-amount" className="form-label"></label>
             <input
               type="number"
               className="form-control"

@@ -12,10 +12,9 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         {Auth.loggedIn() ? (
-          <div className="navbar-brand" id="logout" onClick={logout}>
-            {" "}
+          <Link className="navbar-brand" id="logout" onClick={logout}>
             Logout
-          </div>
+          </Link>
         ) : (
           <Link to="/login" className="navbar-brand" id="login">
             Login
