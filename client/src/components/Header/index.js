@@ -1,5 +1,12 @@
 function Header() {
-  return <h1>JDA Bank</h1>;
+  return (
+    <div className="row text-left jumbotron jumbotron-fluid">
+      <div className="col container">
+        <h1 className="display-4 title">JDA Bank</h1>
+        <p className="lead"></p>
+      </div>
+    </div>
+  );
 }
 
 export default Header;

@@ -49,12 +49,11 @@ const Login = (props) => {
           <div className="row">
             <div className="col-7">
               <h1 className="display-3">
-                When
-                <span className="highlight"> banking</span>
-                <span> meets</span>
-                <br />
-                <span className="highlight"> minimalist</span>
-                <div className="mt-5 h3">EZ Money EZ Life.</div>
+                When &nbsp;
+                <span className="highlight">banking</span>
+                &nbsp; meets &nbsp;
+                <span className="highlight">minimalist</span>
+                <div className="mt-5 h4">EZ Money EZ Life.</div>
               </h1>
             </div>
             <div className="col">
