@@ -1,12 +1,26 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
+import Auth from "../../utils/auth";
+
 function Navbar() {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <Link to="/login" className="navbar-brand" href="#">
-          Login
-        </Link>
+        {Auth.loggedIn() ? (
+          <div className="navbar-brand" id="logout" onClick={logout}>
+            {" "}
+            Logout
+          </div>
+        ) : (
+          <Link to="/login" className="navbar-brand" id="login">
+            Login
+          </Link>
+        )}
         <button
           className="navbar-toggler"
           type="button"
@@ -20,11 +34,15 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link active" aria-current="page">
-                Home
-              </Link>
-            </li>
+            {Auth.loggedIn() ? (
+              <li className="nav-item">
+                <Link to="/" className="nav-link active" aria-current="page">
+                  Home
+                </Link>
+              </li>
+            ) : (
+              <></>
+            )}
             <li className="nav-item">
               <Link className="nav-link" href="#">
                 Features

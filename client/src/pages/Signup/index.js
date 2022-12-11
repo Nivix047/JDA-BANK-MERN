@@ -44,7 +44,7 @@ const Signup = () => {
     <main>
       {data ? (
         <p>
-          Success! You may now head <Link to="/">back to the homepage.</Link>
+          Success! <Link to="/">Heading to your personal account.</Link>
         </p>
       ) : (
         <div className="container signup-form">
