@@ -9,7 +9,7 @@ function Navbar() {
     Auth.logout();
   };
   return (
-    <main className="pb-4 pt-4">
+    <main className="pb-4">
       <nav className="navbar navbar-expand-lg bg-light" id="navbar">
         <div className="container-fluid">
           {Auth.loggedIn() ? (
