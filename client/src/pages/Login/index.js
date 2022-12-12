@@ -42,7 +42,31 @@ const Login = (props) => {
     <main>
       {data ? (
         <p>
-          Success! <Link to="/">Heading to your personal account.</Link>
+          <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>{" "}
+          <Link to="/" />
         </p>
       ) : (
         <div className="container login-form">
@@ -53,7 +77,7 @@ const Login = (props) => {
                 <span className="highlight">banking</span>
                 &nbsp; meets &nbsp;
                 <span className="highlight">minimalist</span>
-                <div className="mt-5 h4">EZ Money EZ Life.</div>
+                <div className="mt-5 h3">EZ Money EZ Life.</div>
               </h1>
             </div>
             <div className="col">

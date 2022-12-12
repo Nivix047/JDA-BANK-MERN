@@ -1,18 +1,17 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-// import TransactionList from '../components/TransactionList';
 import { QUERY_ME } from "../../utils/queries";
 import TransactionForm from "../../components/TransactionForm";
 import TransactionList from "../../components/TransactionList";
 
 const Home = () => {
-  // const { loading, data } = useQuery(QUERY_ME);
-  // const transactions = data?.transaction || [];
+  const { data } = useQuery(QUERY_ME);
+  const userInfo = data?.me || [];
   return (
     <main>
       <div className="container">
         <div className="row">
-          <TransactionForm />
+          <TransactionForm userInfo={userInfo} />
           <TransactionList />
         </div>
       </div>
