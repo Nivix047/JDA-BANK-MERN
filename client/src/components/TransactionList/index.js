@@ -37,7 +37,7 @@ const TransactionList = ({ userInfo }) => {
                 {debitTrans.map((debitTrans) => (
                   <div id="debit-transaction" key={debitTrans._id}>
                     You paid {debitTrans.amount}
-                    <span className="cap"> {debitTrans.recipient} </span>
+                    <span className="cap"> {debitTrans.sender} </span>
                     on {debitTrans.transaction_date}
                   </div>
                 ))}
