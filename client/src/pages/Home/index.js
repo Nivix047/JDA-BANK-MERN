@@ -7,14 +7,20 @@ import TransactionList from "../../components/TransactionList";
 import { QUERY_ME } from "../../utils/queries";
 
 const Home = () => {
-  const { data } = useQuery(QUERY_ME);
-  const userInfo = data?.me || [];
+  const { data, loading } = useQuery(QUERY_ME);
+  const userInfo = data?.me || {};
   return (
     <main>
       <div className="container">
         <div className="row">
-          <TransactionForm userInfo={userInfo} />
-          <TransactionList />
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <>
+              <TransactionForm userInfo={userInfo} />
+              <TransactionList userInfo={userInfo} />
+            </>
+          )}
         </div>
       </div>
     </main>
