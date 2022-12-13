@@ -1,9 +1,11 @@
 const { Schema, model, Mongoose } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
 
 const transactionSchema = new Schema({
   transaction_date: {
     type: Date,
     default: Date.now,
+    get: (timestamp) => dateFormat(timestamp),
   },
   recipient: {
     type: String,
