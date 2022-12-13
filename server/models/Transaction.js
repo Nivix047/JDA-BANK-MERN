@@ -11,6 +11,7 @@ const transactionSchema = new Schema({
     type: String,
     required: true,
     trim: true,
+    lowercase: true,
   },
   sender: {
     type: String,

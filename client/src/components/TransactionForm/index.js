@@ -13,7 +13,7 @@ const TransactionForm = ({ userInfo }) => {
     try {
       const { data } = await addTransaction({
         variables: {
-          recipient,
+          recipient: recipient.toLowerCase(),
           amount,
           message,
         },

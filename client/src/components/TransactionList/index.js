@@ -27,8 +27,8 @@ const TransactionList = ({ userInfo }) => {
               <div>
                 {creditTrans.map((creditTrans) => (
                   <div id="credit-transaction" key={creditTrans._id}>
-                    {creditTrans.recipient} Paid you
-                    <span className="cap"> {creditTrans.amount} </span>
+                    {creditTrans.sender} Paid you
+                    <span className="cap"> ${creditTrans.amount} </span>
                     on {creditTrans.transaction_date}
                   </div>
                 ))}
@@ -36,8 +36,8 @@ const TransactionList = ({ userInfo }) => {
               <div>
                 {debitTrans.map((debitTrans) => (
                   <div id="debit-transaction" key={debitTrans._id}>
-                    You paid {debitTrans.amount}
-                    <span className="cap"> {debitTrans.sender} </span>
+                    You paid {debitTrans.recipient}
+                    <span className="cap"> ${debitTrans.amount} </span>
                     on {debitTrans.transaction_date}
                   </div>
                 ))}
