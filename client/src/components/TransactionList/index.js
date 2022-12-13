@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const TransactionList = ({ userInfo }) => {
   const { transactions, username } = userInfo;
 
