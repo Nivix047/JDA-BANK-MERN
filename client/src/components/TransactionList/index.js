@@ -52,6 +52,7 @@ const TransactionList = ({ userInfo }) => {
   );
 };
 
+// Old codes
 // {transactions
 //   .filter((transaction) => transaction.sender === username)
 //   .map((debitTrans) => (
