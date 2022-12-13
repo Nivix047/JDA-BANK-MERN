@@ -10,6 +10,7 @@ const transactionSchema = new Schema({
   recipient: {
     type: String,
     required: true,
+    trim: true,
   },
   sender: {
     type: String,
@@ -24,6 +25,7 @@ const transactionSchema = new Schema({
   amount: {
     type: Number,
     required: true,
+    trim: true,
   },
   message: {
     type: String,
