@@ -18,9 +18,9 @@ const TransactionForm = ({ userInfo }) => {
           message,
         },
       });
-      setRecipient("");
-      setAmount("");
-      setMessage("");
+      // setRecipient("");
+      // setAmount("");
+      // setMessage("");
       window.location.reload();
     } catch (err) {
       console.error(err);
