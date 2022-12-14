@@ -13,7 +13,10 @@ const resolvers = {
     me: async (parent, args, context) => {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id }).populate(
-          "transactions"
+          {
+            path: "transactions",
+            options: { sort: { transaction_date: -1 } },
+          }
         );
         console.log("userData", userData);
         return userData;
