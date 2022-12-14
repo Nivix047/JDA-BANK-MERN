@@ -10,17 +10,27 @@ const TransactionList = ({ userInfo }) => {
                 {transactions.map((transaction) =>
                   transaction.recipient === username ? (
                     <div id="credit-transaction" key={transaction._id}>
-                      {transaction.sender} Paid you
+                      {transaction.sender} paid you
                       <span className="cap">
                         {" "}
                         ${transaction.amount}{" "}
                       </span> on {transaction.transaction_date}
+                      {transaction.message ? (
+                        <div>{transaction.message}</div>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   ) : (
                     <div id="debit-transaction" key={transaction._id}>
                       You paid
                       <span className="cap"> {transaction.recipient} </span>$
                       {transaction.amount} on {transaction.transaction_date}
+                      {transaction.message ? (
+                        <div>{transaction.message} </div>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   )
                 )}
