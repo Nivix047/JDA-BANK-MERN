@@ -15,6 +15,11 @@
   background-image: var(--gradient-primary);
 }
 
+#footer {
+  background-image: var(--gradient-primary);
+  margin: 0px 0px 0px 0px;
+}
+
 .highlight {
   position: relative;
 }

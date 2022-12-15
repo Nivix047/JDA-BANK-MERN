@@ -10,6 +10,7 @@ import { setContext } from "@apollo/client/link/context";
 import "./App.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -53,6 +54,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<h1>Wrong page!</h1>} />
           </Routes>
+          <Footer />
         </>
       </Router>
     </ApolloProvider>
