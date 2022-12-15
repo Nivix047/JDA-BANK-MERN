@@ -186,7 +186,9 @@ const Signup = () => {
         </div>
       )}
       {error && (
-        <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+        <div className="my-3 p-3 bg-danger text-white">
+          Please check your login credentials.
+        </div>
       )}
     </main>
   );

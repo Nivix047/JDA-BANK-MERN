@@ -1,12 +1,18 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 
+import Auth from "../../utils/auth";
+
 import TransactionForm from "../../components/TransactionForm";
 import TransactionList from "../../components/TransactionList";
 
 import { QUERY_ME } from "../../utils/queries";
 
 const Home = () => {
+  if (!Auth.loggedIn()) {
+    window.location.replace("/login");
+  }
+
   const { data, loading } = useQuery(QUERY_ME);
   const userInfo = data?.me || {};
   return (
