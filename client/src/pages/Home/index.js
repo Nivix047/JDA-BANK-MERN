@@ -1,12 +1,18 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 
+import Auth from "../../utils/auth";
+
 import TransactionForm from "../../components/TransactionForm";
 import TransactionList from "../../components/TransactionList";
 
 import { QUERY_ME } from "../../utils/queries";
 
 const Home = () => {
+  if (!Auth.loggedIn()) {
+    window.location.replace("/login");
+  }
+
   const { data, loading } = useQuery(QUERY_ME);
   const userInfo = data?.me || {};
   return (
@@ -14,7 +20,32 @@ const Home = () => {
       <div className="container">
         <div className="row">
           {loading ? (
-            <div>Loading...</div>
+            <div>
+              <div className="spinner-grow text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-secondary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-success" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-danger" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-warning" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-light" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+              <div className="spinner-grow text-dark" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>{" "}
+            </div>
           ) : (
             <>
               <TransactionForm userInfo={userInfo} />

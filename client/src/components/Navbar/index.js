@@ -43,11 +43,15 @@ function Navbar() {
               ) : (
                 <></>
               )}
-              <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Features
-                </Link>
-              </li>
+              {Auth.loggedIn() ? (
+                <li className="nav-item">
+                  <Link to="/usage" className="nav-link">
+                    Usage
+                  </Link>
+                </li>
+              ) : (
+                <></>
+              )}
               <li className="nav-item">
                 <Link className="nav-link" href="#">
                   Pricing
