@@ -38,6 +38,7 @@ const resolvers = {
         firstName,
         lastName,
       });
+
       const token = signToken(user);
       return { token, user };
     },
