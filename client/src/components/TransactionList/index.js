@@ -16,7 +16,7 @@ const TransactionList = ({ userInfo }) => {
                         ${transaction.amount}{" "}
                       </span> on {transaction.transaction_date}
                       {transaction.message ? (
-                        <div>{transaction.message}</div>
+                        <div>For {transaction.message}</div>
                       ) : (
                         <></>
                       )}
@@ -27,7 +27,7 @@ const TransactionList = ({ userInfo }) => {
                       <span className="cap"> {transaction.recipient} </span>$
                       {transaction.amount} on {transaction.transaction_date}
                       {transaction.message ? (
-                        <div>{transaction.message} </div>
+                        <div>For {transaction.message} </div>
                       ) : (
                         <></>
                       )}
