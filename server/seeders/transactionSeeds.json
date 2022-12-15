@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "recipient": "dxu",
+    "sender": "jsung",
+    "senderEndingBalance": 9900,
+    "recipientEndingBalance": 10100,
+    "amount": 100,
+    "transaction_date": "Dec 12th, 2022 at 9:16 pm"
+  },
+  {
+    "id": 2,
+    "recipient": "dxu",
+    "sender": "jsung",
+    "senderEndingBalance": 9800,
+    "recipientEndingBalance": 10200,
+    "amount": 100,
+    "transaction_date": "Dec 20th, 2022 at 9:16 pm"
+  },
+  {
+    "id": 3,
+    "recipient": "dxu",
+    "sender": "jsung",
+    "senderEndingBalance": 9600,
+    "recipientEndingBalance": 10400,
+    "amount": 200,
+    "transaction_date": "Dec 25th, 2022 at 9:16 pm"
+  },
+  {
+    "id": 4,
+    "recipient": "dxu",
+    "sender": "jsung",
+    "senderEndingBalance": 9300,
+    "recipientEndingBalance": 10700,
+    "amount": 300,
+    "transaction_date": "Dec 30th, 2022 at 9:16 pm"
+  },
+  {
+    "id": 5,
+    "recipient": "dxu",
+    "sender": "jsung",
+    "senderEndingBalance": 8900,
+    "recipientEndingBalance": 11400,
+    "amount": 400,
+    "transaction_date": "Jan 15th, 2023 at 9:16 pm"
+  }
+]
