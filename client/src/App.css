@@ -20,6 +20,25 @@
   margin: 0px 0px 0px 0px;
 }
 
+/* #footer {
+  background-image: var(--gradient-primary);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    position: static;
+  }
+} */
+
 .highlight {
   position: relative;
 }

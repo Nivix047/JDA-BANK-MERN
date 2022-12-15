@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -19,21 +18,39 @@ function Usage() {
     window.location.replace("/login");
   }
 
-  const { chart, loading } = useQuery(QUERY_ME);
-  const chartInfo = chart?.me || {};
-  console.log("chartInfo", chartInfo, chart);
+  const { data, loading } = useQuery(QUERY_ME);
+  // const dummyObj = {
+  //   transactions: []
+  // };
+  const chartInfo = data?.me || {};
+
+  // console.log("chartInfo.transactions", chartInfo.transactions);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  console.log("chartInfo", chartInfo.transactions[0]);
+
+  const date = chartInfo.transactions.map((transaction) => {
+    return transaction.transaction_date;
+  });
+
+  const senderEndBal = chartInfo.transactions.map((transaction) => {
+    return transaction.senderEndingBalance;
+  });
 
   const x = ["May 12", "May 13", "May 14", "May 15", "May 16", "May 17"];
   const y = [8, 7, 8, 6, 8, 7, 5, 6];
   const z = [3, 4, 8, 5, 1, 6, 9, 6];
 
-  console.log(x);
-  const data = {
-    labels: x,
+  // console.log(x);
+  const chartData = {
+    labels: date,
     datasets: [
       {
         label: "Dataset 1",
-        data: y,
+        data: senderEndBal,
         backgroundColor: "transparent",
         borderColor: "rgb(44, 209, 71)",
         pointBorderWidth: 4,
@@ -71,7 +88,7 @@ function Usage() {
   };
   return (
     <div style={{ width: "80%", height: "80vh", marginleft: "20px" }}>
-      <Line data={data} options={options}></Line>
+      <Line data={chartData} options={options}></Line>
     </div>
   );
 }
