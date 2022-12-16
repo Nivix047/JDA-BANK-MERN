@@ -66,7 +66,7 @@ const Login = (props) => {
           <div class="spinner-grow text-dark" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>{" "}
-          <Link to="/" />
+          <Link to="/home" />
         </p>
       ) : (
         <div className="container login-form">
