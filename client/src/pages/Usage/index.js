@@ -40,26 +40,22 @@ function Usage() {
     return transaction.senderEndingBalance;
   });
 
-  const x = ["May 12", "May 13", "May 14", "May 15", "May 16", "May 17"];
-  const y = [8, 7, 8, 6, 8, 7, 5, 6];
-  const z = [3, 4, 8, 5, 1, 6, 9, 6];
+  // const sb = chartInfo.transactions
+  //   .map((transaction) => transaction)
+  //   .sort((a, b) => b - a);
 
-  // console.log(x);
+  const x = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const y = ["may", "june", "july"];
+
+  const reverseDate = date.reverse();
+  const reverseSenderBal = senderEndBal.reverse();
+
   const chartData = {
-    labels: date,
+    labels: reverseDate,
     datasets: [
       {
-        label: "Dataset 1",
-        data: senderEndBal,
-        backgroundColor: "transparent",
-        borderColor: "rgb(44, 209, 71)",
-        pointBorderWidth: 4,
-        tension: 0.5,
-      },
-      {
-        label: "Dataset 2",
-        data: z,
-        backgroundColor: "transparent",
+        label: "Running balance",
+        data: reverseSenderBal,
         borderColor: "rgb(227, 154, 227)",
         pointBorderWidth: 4,
         tension: 0.5,
@@ -78,7 +74,7 @@ function Usage() {
       },
       y: {
         min: 0,
-        max: 10,
+        max: 200,
         ticks: {
           stepSize: 2,
           callback: (value) => "$" + value,
