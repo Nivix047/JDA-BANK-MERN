@@ -36,11 +36,7 @@ function Navbar() {
             <ul className="navbar-nav">
               {Auth.loggedIn() ? (
                 <li className="nav-item">
-                  <Link
-                    to="/home"
-                    className="nav-link active"
-                    aria-current="page"
-                  >
+                  <Link to="/" className="nav-link active" aria-current="page">
                     Home
                   </Link>
                 </li>
