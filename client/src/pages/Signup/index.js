@@ -68,7 +68,7 @@ const Signup = () => {
           <div class="spinner-grow text-dark" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>{" "}
-          <Link to="/" />
+          <Link to="/home" />
         </p>
       ) : (
         <div className="container signup-form mb-5 pb-5">
