@@ -1,6 +1,6 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-
+import { Navigate } from "react-router-dom";
 import Auth from "../../utils/auth";
 
 import TransactionForm from "../../components/TransactionForm";
@@ -17,43 +17,28 @@ const Home = () => {
   const userInfo = data?.me || {};
   return (
     <div>
-      <div className="container">
-        <div className="row">
-          {loading ? (
-            <div>
-              <div className="spinner-grow text-primary" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-secondary" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-success" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-danger" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-warning" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-info" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-light" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>
-              <div className="spinner-grow text-dark" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </div>{" "}
+      {Auth.loggedIn() ? (
+        <div>
+          <div className="container">
+            <div className="row">
+              {loading ? (
+                <div>
+                  <div className="spinner-grow text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <TransactionForm userInfo={userInfo} />
+                  <TransactionList userInfo={userInfo} />
+                </>
+              )}
             </div>
-          ) : (
-            <>
-              <TransactionForm userInfo={userInfo} />
-              <TransactionList userInfo={userInfo} />
-            </>
-          )}
+          </div>
         </div>
-      </div>
+      ) : (
+        <Navigate to="/login" />
+      )}
     </div>
   );
 };
