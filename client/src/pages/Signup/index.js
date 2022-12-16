@@ -71,7 +71,7 @@ const Signup = () => {
           <Link to="/" />
         </p>
       ) : (
-        <div className="container signup-form">
+        <div className="container signup-form mb-5 pb-5">
           <div className="row">
             <div className="col-7">
               <h1 className="display-3">
