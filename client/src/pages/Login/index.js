@@ -39,7 +39,7 @@ const Login = (props) => {
   };
 
   return (
-    <main>
+    <div>
       {data ? (
         <p>
           <div class="spinner-grow text-primary" role="status">
@@ -141,7 +141,7 @@ const Login = (props) => {
       {error && (
         <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
       )}
-    </main>
+    </div>
   );
 };
 
