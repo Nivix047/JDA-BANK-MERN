@@ -9,7 +9,7 @@ function Navbar() {
     Auth.logout();
   };
   return (
-    <main className="pb-4">
+    <div className="pb-4">
       <nav className="navbar navbar-expand-lg bg-light" id="navbar">
         <div className="container-fluid">
           {Auth.loggedIn() ? (
@@ -89,7 +89,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </main>
+    </div>
   );
 }
 

@@ -15,11 +15,6 @@
   background-image: var(--gradient-primary);
 }
 
-#footer {
-  background-image: var(--gradient-primary);
-  margin: 0px 0px 0px 0px;
-}
-
 .highlight {
   position: relative;
 }
@@ -231,4 +226,35 @@
 .signup-login-href:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+
+/* To make fixed footer not block texts */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 6.74rem;
+  box-sizing: inherit;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+
+footer {
+  background-image: var(--gradient-primary);
+  /* height of footer: */
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
 }

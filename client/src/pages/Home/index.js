@@ -16,7 +16,7 @@ const Home = () => {
   const { data, loading } = useQuery(QUERY_ME);
   const userInfo = data?.me || {};
   return (
-    <main>
+    <div>
       <div className="container">
         <div className="row">
           {loading ? (
@@ -54,7 +54,7 @@ const Home = () => {
           )}
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

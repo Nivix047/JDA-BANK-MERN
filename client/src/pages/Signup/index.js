@@ -41,7 +41,7 @@ const Signup = () => {
     }
   };
   return (
-    <main>
+    <div>
       {data ? (
         <p>
           <div class="spinner-grow text-primary" role="status">
@@ -190,7 +190,7 @@ const Signup = () => {
           Please check your login credentials.
         </div>
       )}
-    </main>
+    </div>
   );
 };
 
