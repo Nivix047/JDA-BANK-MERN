@@ -28,7 +28,7 @@ export function Contact() {
           <h1 className="display-4 pt-5">
             Contact us
             <div className="pt-5 h3">
-              Need to get in touch with?
+              Need to get in touch?
               <br /> Please fill out the form!
             </div>
           </h1>

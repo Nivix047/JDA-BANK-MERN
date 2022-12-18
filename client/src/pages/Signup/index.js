@@ -83,7 +83,7 @@ const Signup = () => {
               </h1>
             </div>
             <div className="col">
-              <div className="col d-flex justify-content-center login-signup-form p-4">
+              <div className="col d-flex justify-content-center login-signup-form p-4 mb-4">
                 <form
                   onSubmit={handleFormSubmit}
                   className="signup-form login-signup-form"
