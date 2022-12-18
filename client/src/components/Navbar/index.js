@@ -58,11 +58,11 @@ function Navbar() {
                   Contact us
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" href="#">
                   Technical support
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"

@@ -76,7 +76,7 @@ const Login = (props) => {
                 When &nbsp;
                 <span className="highlight">banking</span>
                 &nbsp; meets &nbsp;
-                <span className="highlight">minimalist</span>
+                <span className="highlight">minimalism</span>
                 <div className="mt-5 h3">EZ Money EZ Life.</div>
               </h1>
             </div>
