@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-100 mt-auto bg-dark fixed-bottom" id="footer">
+    <footer className="fixed-bottom" id="footer">
       <div className="container text-center">
         <h2 className="d-flex justify-content-center">
           <a

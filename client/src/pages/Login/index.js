@@ -72,11 +72,11 @@ const Login = (props) => {
         <div className="container login-form">
           <div className="row">
             <div className="col-7">
-              <h1 className="display-3">
+              <h1 className="display-3 pt-5">
                 When &nbsp;
                 <span className="highlight">banking</span>
                 &nbsp; meets &nbsp;
-                <span className="highlight">minimalist</span>
+                <span className="highlight">minimalism</span>
                 <div className="mt-5 h3">EZ Money EZ Life.</div>
               </h1>
             </div>

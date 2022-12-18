@@ -54,15 +54,15 @@ function Navbar() {
               )}
               {/* Extra tabs in case more pages are needed to scale up project */}
               <li className="nav-item">
-                <Link className="nav-link" href="#">
-                  Credit Cards
+                <Link to="/contact" className="nav-link">
+                  Contact us
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" href="#">
                   Technical support
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
