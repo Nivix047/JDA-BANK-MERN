@@ -1,5 +1,6 @@
 const { gql } = require("apollo-server-express");
 
+// Defines the datatype of variables/database
 const typeDefs = gql`
   type User {
     _id: ID

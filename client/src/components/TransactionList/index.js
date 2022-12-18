@@ -47,7 +47,7 @@ const TransactionList = ({ userInfo }) => {
 
 export default TransactionList;
 
-// Old codes // Another way to do it
+// Old codes // Another way to do it // This way the credits and debits gets sorted independently
 // const TransactionList = ({ userInfo }) => {
 //   const { transactions, username } = userInfo;
 //   const creditTrans = transactions
