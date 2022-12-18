@@ -74,7 +74,7 @@ const Signup = () => {
         <div className="container signup-form">
           <div className="row">
             <div className="col-7">
-              <h1 className="display-3">
+              <h1 className="display-3 pt-5">
                 When &nbsp;
                 <span className="highlight">banking</span>
                 &nbsp; meets &nbsp;

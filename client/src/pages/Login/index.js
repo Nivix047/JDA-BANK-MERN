@@ -72,7 +72,7 @@ const Login = (props) => {
         <div className="container login-form">
           <div className="row">
             <div className="col-7">
-              <h1 className="display-3">
+              <h1 className="display-3 pt-5">
                 When &nbsp;
                 <span className="highlight">banking</span>
                 &nbsp; meets &nbsp;
