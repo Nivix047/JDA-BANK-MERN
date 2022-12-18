@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 
+// Mutation is done in Apollo sandbox
 export const ADD_USER = gql`
   mutation addUser(
     $username: String!

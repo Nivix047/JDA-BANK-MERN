@@ -2,6 +2,7 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Transaction } = require("../models");
 const { signToken } = require("../utils/auth");
 
+// The gets
 const resolvers = {
   Query: {
     users: async (parent, args, context) => {
@@ -25,7 +26,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in");
     },
   },
-
+  // The put, post, delete
   Mutation: {
     addUser: async (
       parent,
@@ -77,7 +78,7 @@ const resolvers = {
           recipientEndingBalance: recEndBal,
         });
         console.log("newTransaction", newTransaction._id);
-        const x = await User.findOneAndUpdate(
+        await User.findOneAndUpdate(
           {
             username: userRecipient.username,
           },
@@ -87,7 +88,7 @@ const resolvers = {
           },
           { new: true }
         );
-        const y = await User.findOneAndUpdate(
+        await User.findOneAndUpdate(
           {
             username: user.username,
           },
@@ -97,7 +98,6 @@ const resolvers = {
           },
           { new: true }
         );
-        console.log(x, y);
         console.log(newTransaction);
         return newTransaction;
       }

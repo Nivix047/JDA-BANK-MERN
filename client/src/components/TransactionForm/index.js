@@ -68,6 +68,7 @@ const TransactionForm = ({ userInfo }) => {
               id="transfer-amount"
               placeholder="Amount"
               name="amount"
+              min="1"
               value={amount}
               onChange={handleChange}
             />

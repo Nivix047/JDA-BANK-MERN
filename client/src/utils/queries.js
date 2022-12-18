@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 
+// Query is done in Apollo sandbox
 export const QUERY_USERS = gql`
   query users {
     users {

@@ -52,12 +52,18 @@ function Navbar() {
               ) : (
                 <></>
               )}
+              {/* Extra tabs in case more pages are needed to scale up project */}
               <li className="nav-item">
                 <Link className="nav-link" href="#">
-                  Pricing
+                  Credit Cards
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
+                <Link className="nav-link" href="#">
+                  Technical support
+                </Link>
+              </li>
+              {/* <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -84,7 +90,7 @@ function Navbar() {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
