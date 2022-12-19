@@ -1,4 +1,4 @@
-# JDA-BANK-MERN
+# JDAB-BANK-MERN
 
 ## Description
 
@@ -9,6 +9,8 @@ Being a MERN stack project, the database is built using Mongoose instead Sequeli
 In the frontend, pages are rendered using react-router-dom. The main function that allows the user to send money and messages to other users are done using React State Hook.
 
 In comparison, the original version that uses the MVC model is more frontend heavy, where much of the calculation is being done in the frontend and then the data gets pushed into the database. The MERN stack version takes information from the forms and the calculations are done by the middleware and then pushed into the database.
+
+Deployed URL: https://jdab-bank-mern.herokuapp.com
 
 ## Installation
 
