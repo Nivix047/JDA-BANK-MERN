@@ -4,7 +4,7 @@
 
 JDAB is a MERN stack cash transfer app that allows money transfer, credit and debit tracking and messaging between users. The purpose of this project was to rebuild the previous version (see JDA Bank in repo), that was built using the MVC framework to MERN stack with GraphQL with addtional features.
 
-Being a MERN stack project, the database is built using Mongoose instead Sequelize. The API querying is done using GraphQL instead of REST API. No controller is needed since it's replaced by Apollo from GraphQL. In terms of the CRUD operation, get routes were replaced by GraphQL's queries and the post, put, and delete routes were replaced by mutations.
+Being a MERN stack project, the database is built using MongoDB instead of SQL. The API querying is done using GraphQL instead of REST API. No controller is needed since it's replaced by Apollo from GraphQL. In terms of the CRUD operation, get routes were replaced by GraphQL's queries and the post, put, and delete routes were replaced by mutations.
 
 In the frontend, pages are rendered using react-router-dom. The main function that allows the user to send money and messages to other users are done using React State Hook.
 
