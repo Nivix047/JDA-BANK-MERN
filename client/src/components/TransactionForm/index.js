@@ -39,7 +39,7 @@ const TransactionForm = ({ userInfo }) => {
   };
   return (
     <div className="col">
-      <form className="transaction-form p-4" onSubmit={handleFormSubmit}>
+      <form className="transaction-form p-4 mb-4" onSubmit={handleFormSubmit}>
         <h3 className="cap">Hi, {userInfo.firstName}</h3>
         <h4>
           <span>Balance:</span>

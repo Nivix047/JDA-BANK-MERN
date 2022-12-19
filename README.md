@@ -2,33 +2,31 @@
 
 ## Description
 
-JDA Bank is a full stack development project. A money transfer app that allows users to transfer money to one another. As the world is moving to a digital and more tech savvy society, paper money is slowly becoming less and less popular. By using this app, users can ditch passing paper money back and forth and just transfer money to one another digitally! The front end of this application was developed using REACT. The entirety of this application was developed using the MERN stack.
+JDAB is a MERN stack cash transfer app that allows money transfer, credit and debit tracking and messaging between users. The purpose of this project was to rebuild the previous version (see JDA Bank in repo), that was built using the MVC framework to MERN stack with GraphQL with addtional features.
 
-Frontend:
-Use components to render all of the different pages of the project. Other pages of the project that were not part of the components were rendered by using routes and linkes. The use of hooks is to recieve information for the forms and give user information to the backend.
+Being a MERN stack project, the database is built using Mongoose instead Sequelize. The API querying is done using GraphQL instead of REST API. No controller is needed since it's replaced by Apollo from GraphQL. In terms of the CRUD operation, get routes were replaced by GraphQL's queries and the post, put, and delete routes were replaced by mutations.
 
-Backend:
-The database was created using Mongoose. Mongoose was the main database that was used for all backend data and queried using GraphQL.
+In the frontend, pages are rendered using react-router-dom. The main function that allows the user to send money and messages to other users are done using React State Hook.
 
-## User Story
+In comparison, the original version that uses the MVC model is more frontend heavy, where much of the calculation is being done in the frontend and then the data gets pushed into the database. The MERN stack version takes information from the forms and the calculations are done by the middleware and then pushed into the database.
 
-As a USER i want to send money electronically
-GIVEN I need to send someone money electronically
-WHEN I open the application I am directed to the login screen where can securely sign in
-THEN I am directed to my my personal account page
-WHEN I want to send money to an individual
-THEN I can enter the name of the individual, a optional message and the amount I want to send
-WHEN the money is transferred
-THEN both the sender and recipient account balances are updated accordingly
-WHEN I am on my personal account page
-THEN I can view a list of all my outgoing (debits), incoming (credits) transactions and messages attached to those
-WHEN I click on the usage link on the navbar
-THEN I am directed to a page with my running balance
+## Installation
+
+To start the app please review the package.json file at the root, server folder and client folder, once ready, please enter npm i at the root folder. Enter npm run develop to start the app.
 
 ## Screenshots
 
-Here is a screenshot and link to the site:
+Login form:
+<img width="845" alt="Screenshot 2022-12-18 at 1 28 31 PM" src="https://user-images.githubusercontent.com/97267318/208323033-c3326a7e-4ebf-4d2d-a853-0e553f251278.png">
 
-![alt screenshot of website](/JDA-BANK-MERN/client/public/website-screenshot.jpg)
+Signup form:
+<img width="1667" alt="Screenshot 2022-12-18 at 1 28 45 PM" src="https://user-images.githubusercontent.com/97267318/208323085-5de440bc-4d33-4001-b89b-bbbead97cc0f.png">
 
-[https://drive.google.com/file/d/1p6esJkqldaQjrSEjOVuJ1h_1s33Iyfd4/view](https://drive.google.com/file/d/1p6esJkqldaQjrSEjOVuJ1h_1s33Iyfd4/view)
+Home page:
+<img width="1672" alt="Screenshot 2022-12-18 at 2 14 31 PM" src="https://user-images.githubusercontent.com/97267318/208323143-861e712e-eb04-4168-a99e-65a12e4ea92c.png">
+
+Running balance:
+<img width="1666" alt="Screenshot 2022-12-18 at 2 15 06 PM" src="https://user-images.githubusercontent.com/97267318/208323163-1b899de2-a082-4127-a2a8-81f3f520c6f9.png">
+
+Contact us page:
+<img width="1675" alt="Screenshot 2022-12-18 at 2 15 18 PM" src="https://user-images.githubusercontent.com/97267318/208323173-2a0a4e12-05c4-45bb-acb5-ec207ae1ca3f.png">
